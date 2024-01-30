@@ -1,0 +1,18 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api/v1/uzum-order-service
+spring:
+  application:
+    name: UZUM-ORDER-SERVICE
+  docker:
+    compose:
+      file: uzum-order-service/compose.yaml
+      lifecycle-management: start_only
+eureka:
+  instance:
+    hostname: 10.10.1.170
+    port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka

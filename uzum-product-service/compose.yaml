@@ -1,10 +1,10 @@
 services:
   mysql:
-    image: 'mysql:latest'
+    image: 'mysql:8.3'
     environment:
-      - 'MYSQL_DATABASE=mydatabase'
-      - 'MYSQL_PASSWORD=secret'
-      - 'MYSQL_ROOT_PASSWORD=verysecret'
-      - 'MYSQL_USER=myuser'
+      - 'MYSQL_DATABASE=uzum_product_service'
+      - 'MYSQL_PASSWORD=mysql'
+      - 'MYSQL_ROOT_PASSWORD=mysql'
+      - 'MYSQL_USER=mysql'
     ports:
       - '3306'

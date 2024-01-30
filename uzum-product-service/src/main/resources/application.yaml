@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1/uzum-product-service
+spring:
+  application:
+    name: UZUM-PRODUCT-SERVICE
+  docker:
+    compose:
+      file: uzum-product-service/compose.yaml
+      lifecycle-management: start_only
+eureka:
+  instance:
+    hostname: 10.10.1.170
+    port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka
